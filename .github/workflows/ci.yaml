@@ -12,6 +12,10 @@ jobs:
         uses: hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.12.18
-          tf_actions_subcommand: ['init','plan']
+      - name: Terraform Init
+        run: terraform init  
+        # Generates an execution plan for Terraform
+      - name: Terraform Plan
+        run: terraform plan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
