@@ -6,3 +6,9 @@ resource "aws_instance" "Web-server" {
       Name="Web-Intance"
 }
 }
+
+terraform {
+  backend "local" {
+    path = "D:/GitHub_Action/terraform_hithub_action-1/state/terraform.tfstate"
+  }
+}
