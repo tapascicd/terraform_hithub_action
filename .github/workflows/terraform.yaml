@@ -38,4 +38,6 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      run: terraform plan
+      run: terraform plan --auto-approve
+    - name: Terraform Apply
+      run: terraform apply --auto-approve
